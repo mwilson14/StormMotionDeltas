@@ -205,7 +205,7 @@ def storm_motion_deltas_algorithm(REFlev, REFlev1, big_storm, numsecs, zero_z_tr
 
                 #Set up projection for area calculations
                 proj = partial(pyproj.transform, pyproj.Proj(init='epsg:4326'),
-                           pyproj.Proj(init='epsg:3857'))
+                           pyproj.Proj("+proj=aea +lat_1=37.0 +lat_2=41.0 +lat_0=39.0 +lon_0=-106.55"))
 
                 #Main part of storm tracking algorithm starts by looping through all contours looking for Z centroids
                 #This method for breaking contours into polygons based on this stack overflow tutorial:
